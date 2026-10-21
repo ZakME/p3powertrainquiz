@@ -1,0 +1,224 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Book 303 Quiz</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+:root{
+  --bg:#eef0ef; --panel:#ffffff; --ink:#1d2327; --muted:#5b666d; --line:#d3d8d8;
+  --accent:#d98a04; --accent-ink:#5a3900; --good:#2e7d4f; --good-bg:#e3f2e8; --bad:#b53a2c; --bad-bg:#f8e4e1;
+  --chip:#e3e7e7;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#151a1d; --panel:#1e2529; --ink:#e7ecec; --muted:#9aa6ab; --line:#313b40;
+    --accent:#f0a830; --accent-ink:#ffd690; --good:#6cc494; --good-bg:#1c3326; --bad:#ef8a7c; --bad-bg:#3a2220;
+    --chip:#2a3338;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#151a1d; --panel:#1e2529; --ink:#e7ecec; --muted:#9aa6ab; --line:#313b40;
+  --accent:#f0a830; --accent-ink:#ffd690; --good:#6cc494; --good-bg:#1c3326; --bad:#ef8a7c; --bad-bg:#3a2220;
+  --chip:#2a3338;
+}
+body{background:var(--bg);color:var(--ink);font:15px/1.55 "IBM Plex Sans",system-ui,sans-serif;padding-inline:16px;padding-block:0 48px}
+.wrap{max-width:720px;margin:0 auto}
+header{padding-block:28px 12px}
+.eyebrow{font:500 12px "IBM Plex Mono",ui-monospace,monospace;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+h1{font:700 clamp(30px,6vw,44px)/1.05 "Barlow Condensed","Arial Narrow",sans-serif;margin:6px 0 8px;text-wrap:balance;letter-spacing:.01em}
+.sub{color:var(--muted);margin:0}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:10px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;border-bottom:1px solid var(--line);margin-bottom:18px}
+.score{font:500 14px "IBM Plex Mono",monospace;font-variant-numeric:tabular-nums}
+.score b{color:var(--accent)}
+.filters{display:flex;gap:6px;flex-wrap:wrap;margin-left:auto}
+button{font:inherit;cursor:pointer}
+.f{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:999px;padding:4px 12px;font-size:13px}
+.f[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.reset{border:none;background:none;color:var(--muted);text-decoration:underline;font-size:13px;padding:4px}
+.list{display:grid;gap:14px}
+.q{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px}
+.qhead{display:flex;gap:10px;align-items:baseline;margin-bottom:10px}
+.num{font:500 12px "IBM Plex Mono",monospace;color:var(--muted);flex:none}
+.tag{font:500 11px "IBM Plex Mono",monospace;background:var(--chip);color:var(--muted);border-radius:4px;padding:1px 6px;margin-left:auto;flex:none;letter-spacing:.04em}
+.xtra{font:500 11px "IBM Plex Mono",monospace;color:var(--accent-ink);background:color-mix(in srgb,var(--accent) 22%,transparent);border-radius:4px;padding:1px 6px;margin-left:auto;letter-spacing:.04em}
+.xtra+.tag{margin-left:0}
+.prompt{font-weight:600;margin:0 0 12px}
+.opts{display:grid;gap:8px}
+.opt{text-align:left;border:1px solid var(--line);background:transparent;color:var(--ink);border-radius:8px;padding:10px 12px;display:flex;gap:10px;align-items:flex-start}
+.opt:hover:not(:disabled){border-color:var(--accent)}
+.opt:focus-visible,.f:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.opt .k{font:500 12px "IBM Plex Mono",monospace;color:var(--muted);padding-top:2px;flex:none}
+.opt:disabled{cursor:default}
+.opt.right{border-color:var(--good);background:var(--good-bg)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-bg)}
+.opt.dim{opacity:.55}
+.fb{margin-top:12px;padding-top:12px;border-top:1px dashed var(--line);font-size:14px}
+.fb strong{display:block;margin-bottom:2px}
+.fb.good strong{color:var(--good)} .fb.bad strong{color:var(--bad)}
+.done{margin-top:22px;padding:18px;border-radius:10px;border:2px solid var(--accent);background:var(--panel)}
+.done h2{font:700 26px "Barlow Condensed",sans-serif;margin:0 0 4px}
+@media (prefers-reduced-motion:no-preference){.opt{transition:border-color .15s,background .15s}}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Books 303b–303f · AB HET Period 3</div>
+    <h1>Book 303 Quiz</h1>
+    <p class="sub">Torque converters, powershift and automatic transmissions, and hydraulic retarders. Built from your notes, plus questions marked “Beyond notes” from the Period 3 course outline (including transmission testing and service). Tap an answer to check it.</p>
+  </header>
+  <div class="bar">
+    <div class="score" id="score">0 / 0 correct</div>
+    <div class="filters" id="filters">
+      <button class="f" data-t="all" aria-pressed="true">All</button>
+      <button class="f" data-t="TC" aria-pressed="false">Torque conv.</button>
+      <button class="f" data-t="TRANS" aria-pressed="false">Transmission</button>
+      <button class="f" data-t="RET" aria-pressed="false">Retarder</button>
+      <button class="f" data-t="TEST" aria-pressed="false">Testing</button>
+    </div>
+    <button class="reset" id="reset">Shuffle &amp; restart</button>
+  </div>
+  <div class="list" id="list"></div>
+  <div class="done" id="done" hidden></div>
+</div>
+
+<script>
+const Q=[
+["TC","In a torque converter, vortex flow corresponds to which condition?",["Stall condition","Coupling phase","Lockup clutch applied","Stator freewheeling"],0,"Vortex flow = stall condition (turbine stopped, impeller turning). Rotary flow is turbine and impeller at about the same speed."],
+["TC","What separates a fluid coupling from a torque converter?",["It has no turbine, so output is direct from the impeller","It has no stator, so it can't multiply torque","It always uses a lockup clutch to reach a 1:1 drive","It uses two stators to double torque multiplication"],1,"A fluid coupling is only an impeller and turbine. With no stator to redirect oil, it stays 1:1 with no torque multiplication."],
+["TC","Why does the stator have a one-way (overrunning) clutch?",["So it can drive the charge pump at engine speed","So it can freewheel once rotary flow is reached","So it can hold the turbine still during stall","So it can turn backward to provide reverse gear"],1,"At rotary flow a freewheeling stator overruns and lets the converter couple. A fixed stator can't fully couple and creates drag at higher speeds."],
+["TC","About what turbine speed marks the coupling phase?",["About 0% of impeller speed (turbine stopped)","About 50% of impeller speed","About 90% or more of impeller speed","Slightly faster than impeller speed"],2,"Coupling is turbine at about 90%+ of impeller speed: no torque multiplication, less heat, stator overrunning."],
+["TC","How is a true 1:1 drive achieved through a torque converter?",["A freewheeling stator once rotary flow is reached","A variable pitch stator set to the open position","A lockup clutch, applied hydraulically","A multi-stage turbine and stator arrangement"],2,"The stator alone can never fully lock up. The lockup clutch gives no slippage and the least heat, and releases on every shift to avoid shock loads."],
+["TC","What is the main job of the charge pump?",["Scavenge oil out of a wet converter housing","Keep converter pressure up to stop cavitation","Drive the stator through its one-way clutch","Pump oil through the cooler to cool it"],1,"It “charges” oil into the converter and holds operating pressure, preventing cavitation and aeration (aerated oil lubricates poorly)."],
+["TC","Which of these is correct stall test procedure?",["Test in reverse, since it gives maximum load","Hold the stall until oil temperature levels off","Test in highest gear, never above 121°C (250°F)","Test with cold oil so readings aren't heat-affected"],2,"Never in reverse. Highest gear, operating temperature, level ground, no longer than needed, under 121°C/250°F, and follow the OEM procedure."],
+["TC","After a stall test, how should the unit be cooled down?",["Shut the engine off right away to stop heat","Neutral, with the engine at about half speed","Stay in gear at low idle with brakes applied","Neutral, with the engine at full speed"],1,"Neutral at about half engine speed keeps oil moving through the cooler."],
+["TC","A HIGH stall speed most likely points to what?",["A freewheeling (slipping) stator one-way clutch","A weak engine that can't make its rated power","A slipping transmission clutch or aerated oil","Oil too thick for the operating temperature"],2,"If something slips, the engine is no longer held down and it revs past spec. A slipping stator clutch gives LOW stall speed, not high. A weak engine or thick oil also gives low stall."],
+["TC","Why does a freewheeling (slipping) stator clutch cause LOW stall speed?",["The turbine overspeeds the impeller and pushes oil back","Oil returns against impeller rotation, loading the engine","The charge pump loses prime and pressure drops","The lockup clutch drags and holds the turbine"],1,"At stall the oil leaving the turbine flows backward. A held stator turns it around so it helps the impeller. If the stator spins, that oil hits the impeller head-on and drags the engine down."],
+["TC","On a variable pitch stator, what does the OPEN position do?",["Maximum redirection, so maximum torque and heat","Less redirection: less torque, less heat","Locks the impeller and turbine at a 1:1 ratio","Reverses the turbine to increase vortex flow"],1,"Open = less redirection = less torque and heat. Closed = normal stator. Common on buses and garbage trucks."],
+["TC","Why are multi-stage converters always in the converter phase?",["They have no stator, only turbines","All of them use fixed stators","A lockup clutch is always applied","The planetary set holds the turbine"],1,"More than one turbine and stator set, all with fixed stators, so they never couple."],
+["TC","In a torque divider, what drives what?",["Flywheel: impeller and sun. Turbine: ring. Output: carrier","Flywheel: impeller and ring. Turbine: sun. Output: carrier","Flywheel: impeller only. Turbine: sun. Output: ring gear","Flywheel: impeller and sun. Turbine: carrier. Output: ring"],0,"Flywheel drives impeller and sun. Turbine drives the ring. Ring and sun both drive the carrier (output), for up to 25% more torque. Common on dozers."],
+["TC","How do you leak test a torque converter?",["Dye penetrant on every welded seam and hub","Water tank, 70 psi air, look for bubbles","Fill with oil at 500 psi and check for weeping","Stall test it and watch outlet temperature"],1,"Water tank, 70 psi, check for bubbles."],
+["RET","Which retarder location is most effective in lower gears, since its power is carried through the transmission?",["Output retarder","Input retarder","Remote/driveline retarder","Engine exhaust brake"],1,"Input retarders sit on the transmission input after the torque converter, so gear ratio multiplies them. Output and driveline retarders act independently of RPM and gear."],
+["RET","Aluminum particles on a retarder's magnetic drain plug or filter point to what?",["Pump wear","Rotor wear","Seal or hose failure","Nothing, it's normal"],1,"Aluminum = rotor. Shiny steel = pump. Rubber = seal or hose. Iron or steel chips = broken components."],
+["RET","With a retarder mounted between the crank and flywheel, why is a lockup clutch required?",["Otherwise retarding only slows the engine, not the machine","To keep the retarder housing full of oil while braking","To stop the rotor from contacting the stator housing","To route retarder oil through the torque converter cooler"],0,"Without lockup, the driveline side is only a fluid coupling and retarding doesn't reach the wheels. Synchronizing valves engage the lockup clutch first, then the retarder."],
+["RET","On large haul trucks where the retarder is the primary service brake, when are the friction brakes used?",["Only above about 50 km/h","Only below about 4–5 km/h","Always, together with the retarder","Never, the retarder does all braking"],1,"A retarder only slows the machine. The friction brakes take over below about 4–5 km/h."],
+["RET","Why are accumulators usually found on ON-road retarders?",["To fill the retarder housing quickly","To cool retarder oil between applications","To modulate the lockup clutch apply","Because off-road units can't use them"],0,"They fill the housing fast. Off-road pumps can usually do that alone. More fill = more pressure = more braking."],
+["RET","What temperature should retarder oil be kept below?",["80°C (176°F)","100°C (212°F)","121°C (250°F)","150°C (302°F)"],2,"The oil cooler keeps it below 121°C (250°F). A cooler mounted near the engine coolers can overheat the engine."],
+["TRANS","In a simple planetary, which combination gives the GREATEST reduction?",["Sun held, ring input, carrier output","Sun input, ring held, carrier output","Carrier input, sun held, ring output","Carrier held, sun input, ring output"],1,"Sun input, ring held, carrier output: smallest gear driving the largest. Sun held / ring input is only mild reduction."],
+["TRANS","Which member is always HELD for reverse in a simple planetary?",["Sun gear","Ring gear","Carrier","Nothing is held"],2,"Carrier held: the pinions act as idlers and reverse direction. Nothing held = neutral. Overdrive always has the carrier as input."],
+["TRANS","Using ring ÷ sun + 1, what's the deep reduction ratio for a 40-tooth ring and 10-tooth sun?",["4:1","5:1","3:1","0.25:1"],1,"40 ÷ 10 + 1 = 5, so 5:1."],
+["TRANS","Powershifts are used most often in which kind of application?",["Hauling, long steady runs (haul trucks)","Cycling, constant F/R changes (loaders, crawlers)","Stationary drives (pumps, compressors, gensets)","On-highway stop-and-go (buses, refuse trucks)"],1,"Cycling work with constant F/R changes; most have equal forward and reverse speeds. Automatics are most common in hauling."],
+["TRANS","What happens when the inching (modulating) pedal is fully pressed?",["The torque converter lockup clutch applies","All clutch application oil is dumped","The service brakes release","The transmission shifts to neutral electronically"],1,"It modulates oil to the applied clutches; fully pressed dumps it all. Used with no torque converter. Overuse means heat and wear from intentional slipping."],
+["TRANS","In what order are the three hydraulic circuits supplied?",["Lube → torque converter → clutch application","Torque converter → clutch application → lube","Clutch application → torque converter → lube","Clutch application → lube → torque converter"],2,"Clutches first (sequence/priority valve holds the converter off until about 100–500 psi), then the converter (relief about 50–125 psi), then lube (about 30–50 psi)."],
+["TRANS","What does the pressure differential valve do?",["Makes sure steering and brakes have pressure before the transmission","Stops the machine moving if it's started in gear","Limits converter pressure when the oil is cold","Controls how fast modulation pressure rises"],1,"Keeps speed clutch pressure above direction clutch pressure; if started in gear, nothing builds until the selector goes to N. The others are the priority valve, ratio valve and load piston."],
+["TRANS","In the modulator circuit, what happens with more throttle?",["Modulation pressure rises, so upshifts come sooner","Modulation pressure drops, so upshifts come later","Governor pressure drops, so upshifts come later","Modulation pressure rises, so downshifts come later"],1,"Less modulation pressure means governor pressure has to climb higher before an upshift, so the machine builds more momentum first. Under high throttle and load it also causes downshifts."],
+["TRANS","What does the governor do?",["Limits engine top speed","Turns output speed into a pressure signal","Controls lockup clutch apply temperature","Meters lube oil to the clutch packs"],1,"Spinning moves a spool that blocks the tank port and sends pressure to the shift valves. Full speed = fully closed = full pressure."],
+["TRANS","How should you tow a machine with a powershift or automatic transmission?",["Wheels down, with the selector held in neutral","Lift the drive wheels or pull the driveshafts","Wheels down, with the engine idling in neutral","Any way, as long as it's under 10 km/h"],1,"Towing wheels-down causes massive wear and accelerated failure."],
+["TRANS","If a clutch is applied too FAST, what do you get?",["RPM flare and loss of power","Harsh shifting, engine lugging, or damage","Faster clutch wear from extra slipping","A moment with no gear applied at all"],1,"Too fast = harsh shifts, lugging, damage. Too slow = faster wear, RPM flare, and a moment with no gear applied."],
+["TC","Which torque converter element is the 'pump', driven directly by the engine?",["Turbine","Stator","Impeller","Lockup clutch"],2,"The impeller is your pump. It runs off the engine and throws oil at the turbine."],
+["TC","When does a torque converter make the most torque multiplication, and the most heat?",["At the coupling point, as the stator releases","At stall, with the biggest speed difference","At lockup, when the clutch first engages","Right as the turbine reaches full impeller speed"],1,"Max torque and max heat both happen at the biggest speed difference, which is stall. Vortex flow is strongest there."],
+["TC","When does a standard stator begin to rotate?",["As soon as the turbine starts to turn","Gradually, speeding up along with the turbine","At the coupling point","Only once the lockup clutch applies"],2,"The stator stays locked for the whole converter phase. Multiplication tapers because the oil angle changes, not because the stator spins. It freewheels at about 85–90% turbine speed, when oil starts hitting the backs of the vanes."],
+["TC","A machine has low stall speed but the engine checks out fine. It accelerates very poorly from a stop but runs normally at speed. Most likely cause?",["A slipping forward clutch in the transmission","A slipping stator one-way clutch","A plugged oil cooler","A stator seized in the locked position"],1,"A slipping stator acts like a fluid coupling at low speed, so launch is weak and stall is low. Once at coupling, the stator should freewheel anyway, so cruising is normal."],
+["TC","A stator seized in the locked position would most likely cause what?",["Low stall speed and a weak launch from a stop","High stall speed with normal cruising","Normal stall, but heat and drag at cruise","No drive in any range until it's freed"],2,"Stall is normal because the stator should be locked at stall. At speed it can't get out of the way, so it adds drag, heat and lowers top speed."],
+["TC","What does stall speed measure?",["Charge pump output at full engine speed","Torque generation of the engine and converter","Clutch holding capacity in the highest gear","How well the oil cooler sheds heat under load"],1,"Stall speed is where engine torque balances what the converter absorbs. It shows how well both are making and handling torque."],
+["TC","What protects the torque converter from overpressure on the inlet side?",["Lube pressure relief valve","Converter inlet relief valve","Clutch modulation relief valve","Main pressure differential valve"],1,"The inlet relief valve limits converter inlet pressure. On some units it also acts as the main control."],
+["TC","Where does oil leaving the torque converter outlet go?",["Straight to the clutch apply circuit","To the cooler, then lube, then sump","Back to the charge pump inlet","To the retarder housing first"],1,"Outlet oil goes through the cooler (and filters on some units), then on to lube and back to the sump."],
+["TC","Why does the lockup clutch release every time the transmission shifts?",["To refill the converter with fresh, cool oil","So the fluid drive cushions shift shock","To let the lockup clutch discs cool between shifts","So the governor can reset its pressure signal"],1,"With lockup released, the fluid drive cushions the shift and shock loads are avoided."],
+["TC","Why can a fixed stator never reach a true coupling phase?",["Its vanes are too flat to redirect the oil","It can't freewheel, so it keeps redirecting oil","It's splined to the turbine","It blocks oil flow back to the impeller"],1,"A fixed stator can't overrun, so it stays in the converter phase and adds drag and heat at higher speeds."],
+["TC","What is the benefit of a multiple turbine converter?",["More fluid flow and more pumping capacity","A broader torque multiplication range","A lower stall speed for smoother launch","No need for a stator at all"],1,"Multiple turbines give a broader multiplication range. Multiple impellers give more fluid flow and more torque."],
+["TC","In a torque divider at stall, with the carrier (output) held, what does the turbine do?",["Stops along with the output","Turns forward at engine speed","Is driven backward","Locks to the impeller"],2,"With the carrier held, the sun (engine driven) forces the ring backward. The turbine is on the ring, so it reverses, making more vortex flow and more torque."],
+["TC","What is the main mounting concern with a remote mounted torque converter?",["Rubber block coupler wear and cracking","Driveshaft angles and alignment","Flywheel balance weight placement","Wet housing oil level"],1,"Remote converters connect to the engine by driveshaft, so angles and alignment are critical. Rubber block couplers are an engine-mounted feature."],
+["TC","Why do some off-road converters use a wet housing, and what does it need?",["For PTO lube; needs a drain or scavenge pump","For cooling; needs a larger external cooler","To mount a retarder; needs its own accumulator","For noise control; needs no extra service"],0,"Wet housings are sealed to the flywheel housing and need a gravity drain or scavenge pump to keep the oil level right."],
+["TC","What must you check before and after removing or installing a torque converter?",["Crankshaft endplay","Stall speed in top gear","Converter outlet temperature","Cooler flow rate"],0,"Check crankshaft endplay before and after. Also check flywheel housing bore, face runout, eccentricity, and flywheel flatness."],
+["TC","Which cleaner should NOT be used on aluminum converter parts?",["Petroleum solvent","Caustic cleaners","Soap and water","Brake clean"],1,"Caustic cleaners attack aluminum."],
+["TC","Which of these is NOT a common cause of torque converter overheating?",["Working a gear too high for the load or grade","A plugged cooler or a weak charge pump","Spending most of the time in coupling phase","Lockup clutch not applying when it should"],2,"Running near coupling makes little heat. Overheating comes from working too high a gear, plugged coolers, wrong oil level, no lockup, a bad charge pump, or high ambient temperature."],
+["TC","Typical maximum torque multiplication for a single-stage, three-element converter is roughly:",["1:1","2:1 to 3:1","5:1 to 6:1","10:1"],1,"Single-stage converters usually top out somewhere around 2:1 to 3:1 at stall. Multi-stage designs go higher.",1],
+["RET","How does a hydraulic retarder slow the machine?",["Friction discs clamp the output shaft","Oil resists a spinning rotor, making heat","It reverses the turbine","It cuts fuel and closes the exhaust"],1,"It's hydrodynamic braking. The energy goes into the oil as heat, which is why the cooler matters so much."],
+["RET","Why can't a hydraulic retarder bring the machine to a full stop?",["It only works with the machine in reverse","Braking force fades as rotor speed drops","It disengages automatically above 4 km/h","It only works in the highest gear range"],1,"No rotor speed means no oil resistance. You still need the service brakes to stop and hold."],
+["RET","When the retarder is off, what is in the retarder housing?",["A full charge of oil, ready to apply","Only lubrication oil","Nothing, the housing is kept dry","Air pressure to keep oil out"],1,"Only lube oil stays in, so the rotor isn't churning oil and making drag when you don't need it."],
+["RET","What controls how much braking a hydraulic retarder delivers?",["Rotor diameter, which is fixed by design","Housing fill level and pressure","The gear selected, which sets rotor speed","Engine RPM, through the throttle position"],1,"More fill and more pressure means more braking. Fill level is basically power."],
+["RET","What is the advantage of a modulating retarder control valve over an on/off valve?",["It fills the housing faster on demand","The operator can vary retarder effort","It removes the need for an oil cooler","It can work without a charge pump"],1,"On/off valves give full or nothing. Modulating valves let the operator choose the amount, limiting heat and smoothing operation."],
+["RET","Which of these is NOT a typical electronic retarder control input?",["Throttle position sensor","Retarder enable switch","Oil temperature","Steering angle sensor"],3,"Inputs in your notes are TPS, enable, oil temperature, and output shaft speed."],
+["RET","A remote mount (driveline) retarder usually needs what that a transmission-mounted one doesn't?",["Its own pump and reservoir","A lockup clutch on the engine side","A torque divider to boost torque","A ratio valve for cold oil starts"],0,"Input and output retarders share the transmission's oil. A remote unit needs its own pump and reservoir."],
+["RET","Why would some output retarders use a clutch pack?",["To cool oil in the retarder housing","To retard instantly while the housing fills","To replace the service brakes","To engage the converter lockup clutch"],1,"The clutch pack works right away, releases once the housing is full, and can re-apply at low speed where the retarder is weak."],
+["RET","What must be maintained between the retarder rotor and stator?",["Zero clearance, to maximize drag","Rotor-to-stator clearance to spec","A lip seal between rotor and stator","An air gap for cooling the rotor"],1,"The stator is the housing. Oil gets whipped against it, and clearance must be in spec."],
+["RET","What should be done to all retarder circuits after a failure?",["Nothing, as long as the filter is changed","Clean and flush them, cooler included","Drain the sump and refill only","Replace the rotor and leave the rest alone"],1,"Debris left in lines or the cooler will come back and damage new parts."],
+["RET","Shiny steel particles on a retarder drain plug point to what?",["Rotor wear","Pump wear","Seal failure","Normal break-in"],1,"Shiny steel = pump wear. Aluminum = rotor. Rubber = seal or hose. Iron or steel chips = broken parts."],
+["RET","Why do electronic retarder controls watch throttle position?",["To raise engine RPM","To block retarding while on the throttle","To pick the right gear for braking","To control the converter lockup clutch"],1,"Retarding while fueling would fight the engine and make heat for nothing.",1],
+["TRANS","What is the key difference between a powershift and an automatic transmission?",["Powershifts have no clutch packs","Who shifts: the operator or the transmission","Automatics only use countershaft gearing","Powershifts can't change direction under load"],1,"Both shift without interrupting power flow. A powershift shifts when the operator moves the lever; an automatic decides on its own."],
+["TRANS","Why is a planetary gearset strong for its size?",["It uses only helical gears","Load is shared across several pinions","It needs no bearings or bushings at all","It turns slower than a countershaft gear set"],1,"Several planets share the load, and their radial loads offset each other, so bearings and bushings can be smaller."],
+["TRANS","How do you get direct drive (1:1) from a planetary set?",["Hold the carrier and drive the sun","Lock any two members together","Hold the sun and drive the ring","Hold nothing and drive the carrier"],1,"Lock any two members and the whole set turns as one."],
+["TRANS","Carrier input, sun held, ring output gives what?",["Mild overdrive","High overdrive","Mild reduction","Reverse"],0,"Carrier input is always overdrive. Sun held = mild. Ring held (sun output) = high."],
+["TRANS","Carrier input, ring held, sun output gives what?",["Mild overdrive","High overdrive","Reverse","Direct drive"],1,"Ring held is always the high (reduction or overdrive). Here the carrier drives the small sun, so it's high overdrive."],
+["TRANS","Sun held, ring input, carrier output. Ring = 72 teeth, sun = 24 teeth. What's the ratio?",["4:1","3:1","1.33:1","0.75:1"],2,"Sun held: (sun ÷ ring) + 1 = 24/72 + 1 = 1.33:1. Mild reduction."],
+["TRANS","Carrier held, sun input, ring output. Ring = 60 teeth, sun = 20 teeth. What's the result?",["3:1 reduction, forward","3:1 reduction, reverse","4:1 reduction, reverse","0.33:1 overdrive, reverse"],1,"Carrier held = reverse. Ratio = ring ÷ sun = 60/20 = 3:1."],
+["TRANS","For ratio math, the planet carrier counts as how many teeth?",["Same as the sun","Same as the ring","Sun + ring","Ring − sun"],2,"The carrier's equivalent teeth are about sun + ring."],
+["TRANS","A Simpson gear train is two planetary sets that share what?",["A common ring gear","A common sun gear","A common carrier with long and short pinions","Nothing, they're separate"],1,"Simpson = two sets on a common sun. Ravigneaux uses two suns, one ring, and long and short pinions on a common carrier.",1],
+["TRANS","In a countershaft powershift, how is a gear range selected?",["A sliding collar and synchronizer","A clutch locks a meshed gear to its shaft","A planetary brake band holds the ring gear still","The operator slides the gears into full mesh"],1,"All gears stay in mesh. Applying a hydraulic multi-disc clutch locks a free-spinning gear to its shaft.",1],
+["TRANS","How does apply oil get into a rotating clutch on a spinning shaft?",["Through drilled shaft passages and seal rings","By splash lube thrown off the countershaft","Through the governor body and its spool","Through external hydraulic lines to the clutch drum"],0,"Seal rings around the shaft hold pressure into the drilled passage. Worn seal rings cause low pressure in that clutch only.",1],
+["TRANS","What is a stationary clutch also called?",["A brake","A coupling","A lockup","A free-wheel"],0,"Stationary clutches hold a member to the case, so they are sometimes called brakes. Rotating clutches connect two rotating members."],
+["TRANS","What releases a clutch pack when apply oil is dumped?",["Centrifugal force throws the discs apart","Return springs push the piston back","Governor pressure backs the piston off","Lube pressure pushes the steel discs apart"],1,"Return springs push the piston back so the discs separate.",1],
+["TRANS","Why do many rotating clutch pistons have a check ball?",["Holds apply pressure when the engine is off","Dumps oil spun out by centrifugal force","Meters lube oil onto the friction discs","Sets the clutch pack running clearance"],1,"Spinning oil trapped in a released clutch can build pressure and cause drag or a partial apply. The check ball unseats and lets it out.",1],
+["TRANS","In a clutch pack, how are the friction and steel discs attached?",["Both splined to the same member","Frictions to one member, steels to the other","Both splined to the drum","Frictions float free between the steels"],1,"Clamping them together locks the two members.",1],
+["TRANS","What does the priority valve do?",["Makes sure lube gets oil before clutches","Feeds steering and brakes first","Limits converter pressure on cold starts","Times shifts based on throttle position"],1,"Steering and brakes get their required pressure before the transmission circuits, for safety."],
+["TRANS","What sets maximum clutch application pressure?",["Load piston","Modulation relief valve","Ratio valve","Converter inlet relief valve"],1,"The modulation relief valve sets the top limit. The load piston controls how fast pressure rises to it."],
+["TRANS","What is the ratio valve's job?",["Picks gear ratio based on governor pressure","Acts as converter relief when oil is cold","Controls the lockup clutch's apply pressure","Meters oil to the retarder housing"],1,"Cold, thick oil can spike pressure. The ratio valve keeps it off the converter."],
+["TRANS","How does orifice shift dampening work?",["Orifices on apply lines slow clutch fill","Orifices on return lines slow clutch release","Orifices on the governor line","Orifices bypass oil around the cooler"],1,"A slower release to tank overlaps the next clutch apply, which smooths the shift."],
+["TRANS","How does a trimmer valve smooth clutch apply?",["In series; blocks oil until pressure builds","In parallel; bleeds oil early, then closes","In series; reverses flow to release the clutch","In parallel; feeds lube to the clutch discs"],1,"Early on, oil bleeds to tank so pressure rises slowly. Once pressure on the spool's underside gets high enough, it snaps closed and the clutch fully applies."],
+["TRANS","What does a modulator booster do at full throttle?",["Dumps modulator circuit oil to tank at full throttle","Closes the trimmer's path to sump for firmer shifts","Applies the lockup clutch for full throttle pulls","Slows the governor so upshifts come later"],1,"At full throttle, firmer shifts cut clutch slip and heat."],
+["TRANS","In a hydraulic automatic, an upshift happens when:",["Modulator pressure beats governor pressure","Governor beats modulator plus spring force","The operator moves the shift lever","Lube pressure drops below spec"],1,"The governor pushes for upshift with speed. Modulator pressure and the spring push back. More throttle means less modulator pressure, so the shift happens later."],
+["TRANS","How does the shift selector hold a range (for example max 1st)?",["It cuts off governor pressure","It pressurizes the far end of higher shift valves","It locks the converter to hold engine speed","It drains the next clutch so it can't apply"],1,"Clutch pressure on the other end overpowers governor and modulator pressure, blocking the 1-2 shift valve and everything above it."],
+["TRANS","Why is there a check valve or orifice slowing governor pressure decrease?",["To make upshifts happen sooner under load","To stop sudden multi-gear downshifts","To keep governor oil from overheating","To keep the charge pump primed at idle"],1,"Without it, slamming on the brakes would drop governor pressure all at once and slam through every downshift."],
+["TRANS","What happens if a clutch is applied too SLOWLY?",["Harsh shift and engine lugging","Wear, RPM flare, and a moment of no drive","Two gears applied at once","Converter overpressure on the shift"],1,"Too slow = slip, flare, and lost power. Too fast = harsh shift, lugging, and damage."],
+["TRANS","In electronic shift control, which is an OUTPUT?",["Output speed sensor","Shift selector","Shift solenoid","Oil temperature sensor"],2,"Inputs: selector, speed, temperature, and pressure sensors. Processing: control module. Outputs: shift solenoids, warning lights and alarms, auxiliaries."],
+["TRANS","A magnetic pickup speed sensor produces what kind of signal?",["A steady DC voltage that rises with speed","An AC signal whose frequency rises with speed","A 5-volt square wave from a Hall chip inside","A resistance change the module reads"],1,"Gear teeth passing the magnet create an AC signal. Frequency (and voltage) go up as speed goes up.",1],
+["TRANS","How does a TCM detect a slipping clutch?",["By a sudden rise in oil temperature in that gear","Input vs output speed against gear ratio","By comparing throttle position to engine speed","By solenoid current draw alone"],1,"If the measured ratio doesn't match the gear commanded, something is slipping.",1],
+["TRANS","Why do many electronic transmissions use PWM (proportional) solenoids?",["They're cheaper than on/off solenoids","They can ramp clutch pressure smoothly","They don't need power to hold a gear","They replace the need for speed sensors"],1,"Controlling pressure rise electronically replaces a lot of hydraulic modulation hardware.",1],
+["TRANS","What does adaptive shift control do?",["Changes the gear ratios to suit the load","Learns clutch fill timing and adjusts shifts","Turns the retarder off when not needed","Sets engine idle speed to match the converter"],1,"It keeps shifts consistent as parts wear. Adaptive values usually need relearning after rebuilds or TCM replacement. Check the OEM procedure.",1],
+["TEST","What should you do first when diagnosing a transmission complaint?",["Pressure test every clutch circuit","Check fluid, inspect, confirm the complaint","Replace the filter, then road test","Pull the transmission for teardown"],1,"Many problems are low or wrong oil, leaks, or loose wiring. Start simple, then do operational tests.",1],
+["TEST","Milky transmission oil most likely means what?",["Normal aging of the oil","Water or coolant, often a cooler leak","Overheating from slipping clutches","Wrong oil viscosity for the season"],1,"Milky oil means water. Check the oil-to-coolant cooler first.",1],
+["TEST","Dark oil with a burnt smell usually points to what?",["Water getting in through a cooler leak","Overheating and clutch wear","Overfilling, which aerates the oil","Normal condition for high-hour oil"],1,"Burnt oil means slipping clutches or excess heat. Check filters and the magnetic plug for debris.",1],
+["TEST","Clutch pressure is low in ONE gear only. Where do you look?",["Worn charge pump gears or housing","A sticking main pressure regulator valve","That clutch's piston or shaft seal rings","Low oil level or a plugged suction screen"],2,"If every other gear is good, the supply is fine. The leak is in that clutch's circuit.",1],
+["TEST","Pressure is low in ALL gears. Most likely causes?",["A leaking piston seal in first clutch","Supply side: oil, screen, pump, or regulator","A failed output speed sensor confusing the TCM","Worn steel discs in every clutch pack"],1,"A problem common to every gear is upstream: low oil, a plugged screen or filter, a worn pump, or a stuck regulator.",1],
+["TEST","What does an air check on a clutch circuit tell you?",["The gear ratio of each range","Whether the piston applies, and leakage","Oil temperature at each clutch","Speed sensor output when the clutch spins"],1,"Apply regulated shop air to the clutch port. You should hear and feel the clutch apply, with little leakage.",1],
+["TEST","Excessive clutch pack clearance would most likely cause what?",["Harsh, early engagement","Delayed engagement and slipping","High stall speed only in reverse","No effect on shift quality"],1,"The piston has to travel further before the discs clamp, so engagement is late and the clutch can slip.",1],
+["TEST","After a major transmission failure, what must be done to the oil cooler?",["Nothing, the filter will catch debris","Flush it or replace it","Bypass it permanently","Reverse its hoses to back-flush in service"],1,"Debris trapped in the cooler will wash back into the rebuilt transmission.",1],
+["TEST","Before condemning a transmission control module, what should you check?",["Clutch pack clearance","Power, grounds, and wiring","Stall speed and converter outlet temperature","Oil level only"],1,"Most electronic faults are wiring. Read codes with the OEM software, then check circuits with a DVOM.",1],
+["TEST","How do you check a magnetic speed sensor?",["Ohm it, then check AC output while it turns","Check DC supply voltage at the connector, key off","Air check it at the clutch port","Check for continuity to ground only"],0,"Measure coil resistance against spec, then check AC output while the shaft turns. Also check the air gap and look for debris on the tip.",1],
+["TEST","What does a neutral start switch do?",["Holds neutral when parked on hills","Stops cranking unless it's in neutral","Releases the parking brake","Sets idle speed until oil warms up"],1,"It prevents the machine from lurching when it starts.",1],
+["TEST","When removing a transmission, which practice is correct?",["Leave lines open so they drain","Cap lines, tag wiring, use proper lifting gear","Pry on the housing to break it free","Remove the mounts and let it hang"],1,"Keep dirt out, make reassembly easy, and never let the unit hang on the input shaft.",1]
+];
+const TAGS={TC:"TC",TRANS:"TRANS",RET:"RETARDER",TEST:"TEST & SERVICE"};
+let order=[],answers={},filter="all",perm={};
+const list=document.getElementById("list"),scoreEl=document.getElementById("score"),doneEl=document.getElementById("done");
+function shuffle(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function start(shuf){order=Q.map((_,i)=>i);if(shuf)shuffle(order);perm={};Q.forEach((q,i)=>{perm[i]=shuffle(q[2].map((_,k)=>k))});answers={};render()}
+function visible(){return order.filter(i=>filter==="all"||Q[i][0]===filter)}
+function render(){
+  list.innerHTML="";
+  visible().forEach((qi,n)=>{
+    const [t,p,opts,c,ex,extra]=Q[qi];const a=answers[qi];
+    const card=document.createElement("div");card.className="q";
+    card.innerHTML=`<div class="qhead"><span class="num">Q${String(n+1).padStart(2,"0")}</span>${extra?'<span class="xtra">Beyond notes</span>':''}<span class="tag">${TAGS[t]}</span></div><p class="prompt"></p><div class="opts"></div>`;
+    card.querySelector(".prompt").textContent=p;
+    const box=card.querySelector(".opts");
+    perm[qi].forEach((oi,pos)=>{const o=opts[oi];
+      const b=document.createElement("button");b.className="opt";b.id=`q${qi}o${oi}`;
+      b.innerHTML=`<span class="k">${"ABCD"[pos]}</span><span></span>`;b.lastChild.textContent=o;
+      if(a!==undefined){b.disabled=true;if(oi===c)b.classList.add("right");else if(oi===a)b.classList.add("wrong");else b.classList.add("dim")}
+      b.onclick=()=>{answers[qi]=oi;render()};
+      box.appendChild(b);
+    });
+    if(a!==undefined){const fb=document.createElement("div");fb.className="fb "+(a===c?"good":"bad");fb.innerHTML=`<strong>${a===c?"Correct.":"Not quite. Answer: "+"ABCD"[perm[qi].indexOf(c)]}</strong><span></span>`;fb.lastChild.textContent=ex;card.appendChild(fb)}
+    list.appendChild(card);
+  });
+  const v=visible(),done=v.filter(i=>answers[i]!==undefined),right=done.filter(i=>answers[i]===Q[i][3]);
+  scoreEl.innerHTML=`<b>${right.length}</b> / ${done.length} correct · ${v.length-done.length} left`;
+  if(done.length===v.length&&v.length){doneEl.hidden=false;const pct=Math.round(right.length/v.length*100);doneEl.innerHTML=`<h2>${right.length} of ${v.length} (${pct}%)</h2><p>${pct>=80?"Solid. You're in good shape on this section.":pct>=60?"Close. Review the ones marked red, then shuffle and go again.":"Go back through the red ones in your notes, then shuffle and retry."}</p>`}else doneEl.hidden=true;
+}
+document.getElementById("filters").onclick=e=>{const b=e.target.closest(".f");if(!b)return;filter=b.dataset.t;document.querySelectorAll(".f").forEach(x=>x.setAttribute("aria-pressed",x===b));render()};
+document.getElementById("reset").onclick=()=>{start(true);window.scrollTo(0,0)};
+start(false);
+</script>
+
+</body></html>
